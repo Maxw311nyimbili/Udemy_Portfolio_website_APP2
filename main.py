@@ -30,7 +30,13 @@ with col3:
     # this will iterate through the first
     for index, item in df[:10].iterrows():
         st.header(item["title"])
+        st.write(item["description"])
+        st.image("images/" + item["image"])
+        st.write(f"[Source code]({item['url']})")
 
 with col4:
     for index, item in df[10:].iterrows():
         st.header(item["title"])
+        st.write(item["description"])
+        st.image("images/" + item["image"])
+        st.write(f"[Source code]({item['url']})")

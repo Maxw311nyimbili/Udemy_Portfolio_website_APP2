@@ -25,7 +25,7 @@ with st.container():
 df = pandas.read_csv("data.csv", sep=";")  # to get the information in form of a table, use the sep=";" as the text is
 # separated by a semicolon.
 
-col3, col4 = st.columns(2)
+col3, empty_col, col4 = st.columns([1.5, 0.5, 1.5])
 with col3:
     # this will iterate through the first
     for index, item in df[:10].iterrows():
